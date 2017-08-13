@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="author" content="Jora Khachatryan">
+      <title>Chat</title>
+    <link rel='stylesheet' href='/stylesheets/style.css'></link>
+  </head>
+  <body>
+    <div id='content'>
+      <div id='room'></div>
+      <div id='room-list'></div>
+      <div id='messages'></div>
+      <form id='send-form'>
+        <input id='send-message'>
+        <input id='send-button' type='submit' value='Send'>
+        <div id='help'>
+          Chat commands:
+          <ul>
+            <li>Change nickname: <code>/nick [username]</code></li>
+            <li>Join/create room: <code>/join [room name]</code></li>
+          </ul>
+        </div>
+      </form>
+    </div>
+    <script src='/socket.io/socket.io.js'></script>
+    <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+    <script src='/javascripts/chat.js'></script>
+    <script src='/javascripts/chat_ui.js'></script>
+  </body>
+</html>
